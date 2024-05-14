@@ -1,0 +1,16 @@
+<h2> Por region</h2>
+<div class="row mb-2">
+  <div class="col">
+    <ul class="nav justify-content-center">
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button *ngFor="let region of regions" class="btn" [ngClass]="{ 'custom': selectedRegion === region }" (click)="searchByRegion(region)">{{region |titlecase}}</button>
+      </div>
+    </ul>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <shared-loading-spinner *ngIf="isLoading"></shared-loading-spinner>
+    <countries-table [countries]="countries"></countries-table>
+  </div>
+</div>

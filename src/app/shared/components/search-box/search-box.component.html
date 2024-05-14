@@ -1,0 +1,12 @@
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <input type="text"
+      class="form-control text-center"
+      [value]="initialValue"
+      [placeholder]="placeholder"
+      (keyup)="onKeyPress(txtInput.value)"
+      #txtInput>
+  </div>
+</div>
+
+<!-- (keyup.enter)="emitValue(txtInput.value)" -->

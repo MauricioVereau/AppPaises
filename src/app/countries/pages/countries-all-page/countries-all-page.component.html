@@ -1,0 +1,40 @@
+<!-- <h2>Todos los paises</h2>
+<div class="row">
+  <div class="col">
+    <table class="table custom-table table-striped table-hover rounded">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Icono</th>
+          <th>Bandera</th>
+          <th>Nombre</th>
+          <th>Capital</th>
+          <th>Poblacion</th>
+          <th></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let country of countries; let i = index">
+          <td> {{ i + 1}} </td>
+          <td> {{ country.flag }}</td>
+          <td> <img [src]="country.flags.svg" [alt]="country.name.common"> </td>
+          <td> {{ country.name.common }}</td>
+          <td> {{ country.capital }}</td>
+          <td> {{ country.population }}</td>
+          <td> <a [routerLink]="['/countries/by', country.cca3]">Info</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div> -->
+
+
+<h2>Todos los paises</h2>
+<div class="row">
+  <div class="col">
+    <hr>
+      <shared-loading-spinner *ngIf="isLoading"></shared-loading-spinner>
+      <countries-table [countries]="countries" ></countries-table>
+  </div>
+</div>
